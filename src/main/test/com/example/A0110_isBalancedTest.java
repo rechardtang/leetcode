@@ -67,12 +67,12 @@ public class A0110_isBalancedTest {
         TreeNode case5Node5 = new TreeNode(5);
         TreeNode case5Node6 = new TreeNode(6);
         TreeNode case5Node7 = new TreeNode(8);
-        case5Node1.left = case4Node2;
+        case5Node1.left = case5Node2;
         case5Node1.right = case5Node3;
         case5Node2.left = case5Node4;
         case5Node2.right = case5Node5;
         case5Node3.left = case5Node6;
         case5Node4.left = case5Node7;
-        assertTrue(client.isBalanced(case4Node1));
+        assertTrue(client.isBalanced(case5Node1));
     }
 }

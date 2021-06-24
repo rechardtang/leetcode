@@ -34,17 +34,15 @@ import com.example.internal.TreeNode;
  * -104 <= Node.val <= 104
  */
 public class A0110_isBalanced {
-
+// [1,2,2,3,null,null,3,4,null,null,4]
     public boolean isBalanced(TreeNode root) {
         if (root == null) return true;
-        return Math.abs(heightOfNode(root.left, 0) - heightOfNode(root.right, 0)) <= 1;
+        return Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1;
     }
 
-    private int heightOfNode(TreeNode root, int height) {
-        if (root != null) {
-            height = Math.max(heightOfNode(root.left, height + 1), heightOfNode(root.right, height + 1));
-        }
-        return height;
+    private int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 
 }
