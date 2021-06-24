@@ -3,6 +3,7 @@ package com.example;
 import com.example.internal.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -61,6 +62,24 @@ public class A0094_inorderTraversal {
         traverseRecursively(root.left, result);
         result.add(root.val);
         traverseRecursively(root.right, result);
+    }
+
+    public List<Integer> inorderTraversalDFS(TreeNode root) {
+        if (root == null) return Collections.emptyList();
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode ptr = root;
+        while (!stack.isEmpty() || ptr != null) {
+            if (ptr != null) {
+                stack.push(ptr);
+                ptr = ptr.left;
+            }else{
+                TreeNode pop = stack.pop();
+                result.add(pop.val);
+                ptr = pop.right;
+            }
+        }
+        return result;
     }
 
 }

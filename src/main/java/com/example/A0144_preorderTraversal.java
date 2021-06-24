@@ -65,9 +65,7 @@ public class A0144_preorderTraversal {
     }
 
     public List<Integer> preorderTraversalDFS(TreeNode root) {
-        if (root == null) {
-            return Collections.emptyList();
-        }
+        if (root == null) return Collections.emptyList();
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
