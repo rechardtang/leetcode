@@ -1,6 +1,31 @@
-package com.example.string;
+package com.example;
 
-public class LongestCommonPrefix {
+/**
+ * 14. 最长公共前缀
+ * 编写一个函数来查找字符串数组中的最长公共前缀。
+ * <p>
+ * 如果不存在公共前缀，返回空字符串 ""。
+ * <p>
+ * <p>
+ * <p>
+ * 示例 1：
+ * <p>
+ * 输入：strs = ["flower","flow","flight"]
+ * 输出："fl"
+ * 示例 2：
+ * <p>
+ * 输入：strs = ["dog","racecar","car"]
+ * 输出：""
+ * 解释：输入不存在公共前缀。
+ * <p>
+ * <p>
+ * 提示：
+ * <p>
+ * 0 <= strs.length <= 200
+ * 0 <= strs[i].length <= 200
+ * strs[i] 仅由小写英文字母组成
+ */
+public class A0014_longestCommonPrefix {
 
     public String longestCommonPrefixN2(String[] strs) {
         int minLen = Integer.MAX_VALUE;
@@ -21,12 +46,5 @@ public class LongestCommonPrefix {
             sb.append(temp);
         }
         return sb.toString();
-    }
-
-    public static void main(String[] args) {
-        LongestCommonPrefix prefix = new LongestCommonPrefix();
-        String[] strs = new String[]{"flower", "flow", "flight"};
-        System.out.println(prefix.longestCommonPrefixN2(strs));
-        ;
     }
 }
