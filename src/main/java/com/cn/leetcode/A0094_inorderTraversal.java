@@ -73,7 +73,7 @@ public class A0094_inorderTraversal {
             if (ptr != null) {
                 stack.push(ptr);
                 ptr = ptr.left;
-            }else{
+            } else {
                 TreeNode pop = stack.pop();
                 result.add(pop.val);
                 ptr = pop.right;

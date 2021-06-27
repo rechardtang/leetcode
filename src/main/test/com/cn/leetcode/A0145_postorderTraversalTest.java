@@ -34,13 +34,11 @@ public class A0145_postorderTraversalTest {
         assertEquals(Collections.singletonList(1), client.postorderTraversal(case2Node1));
 
         TreeNode case3Node1 = new TreeNode(1);
-        TreeNode case3Node2 = new TreeNode(2);
-        case3Node1.left = case3Node2;
+        case3Node1.left = new TreeNode(2);
         assertEquals(Arrays.asList(2, 1), client.postorderTraversal(case3Node1));
 
         TreeNode case4Node1 = new TreeNode(1);
-        TreeNode case4Node2 = new TreeNode(2);
-        case4Node1.right = case4Node2;
+        case4Node1.right = new TreeNode(2);
         assertEquals(Arrays.asList(2, 1), client.postorderTraversal(case4Node1));
     }
 }

@@ -11,11 +11,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class A0015_threeSumTest {
-    private A0015_threeSum a;
+    private A0015_threeSum client;
 
     @Before
     public void setUp() {
-        a = new A0015_threeSum();
+        client = new A0015_threeSum();
     }
 
     @Test
@@ -25,9 +25,9 @@ public class A0015_threeSumTest {
         List<Integer> list2 = Arrays.asList(-1, 0, 1);
         list.add(list1);
         list.add(list2);
-        assertEquals(list, a.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
-        assertEquals(Collections.emptyList(), a.threeSum(new int[]{}));
-        assertEquals(Collections.emptyList(), a.threeSum(new int[]{0}));
+        assertEquals(list, client.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+        assertEquals(Collections.emptyList(), client.threeSum(new int[]{}));
+        assertEquals(Collections.emptyList(), client.threeSum(new int[]{0}));
     }
 
 }
