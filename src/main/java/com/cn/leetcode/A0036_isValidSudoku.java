@@ -1,5 +1,6 @@
 package com.cn.leetcode;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -56,7 +57,38 @@ import java.util.List;
 public class A0036_isValidSudoku {
 
     public boolean isValidSudoku(char[][] board) {
-        return false;
+        int m = board.length, n = board[0].length;
+        boolean[] visited = new boolean[10];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == '.') continue;
+                int key = Integer.parseInt(String.valueOf(board[i][j]));
+                if (visited[key]) {
+                    return false;
+                } else {
+                    visited[key] = true;
+                }
+            }
+
+            // reset
+            Arrays.fill(visited, false);
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (board[j][i] == '.') continue;
+                int key = Integer.parseInt(String.valueOf(board[j][i]));
+                if (visited[key]) {
+                    return false;
+                } else {
+                    visited[key] = true;
+                }
+            }
+            // reset
+            Arrays.fill(visited, false);
+        }
+
+        return true;
     }
 
 }

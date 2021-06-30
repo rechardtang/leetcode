@@ -41,19 +41,4 @@ public class A0070_climbStairs {
         }
         return res[n];
     }
-
-    public static void main(String[] args) {
-        A0070_climbStairs c = new A0070_climbStairs();
-        System.out.println(c.climbStairsR(1));
-        System.out.println(c.climbStairsR(2));
-        System.out.println(c.climbStairsR(3));
-        System.out.println(c.climbStairsR(4));
-        System.out.println(c.climbStairsR(5));
-        System.out.println("===================");
-        System.out.println(c.climbStairsD(1));
-        System.out.println(c.climbStairsD(2));
-        System.out.println(c.climbStairsD(3));
-        System.out.println(c.climbStairsD(4));
-        System.out.println(c.climbStairsD(5));
-    }
 }
