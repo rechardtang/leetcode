@@ -36,6 +36,9 @@ import com.cn.leetcode.internal.ListNode;
 public class A0207_canFinish {
 
     public boolean canFinish(int numCourses, int[][] prerequisites) {
+
+
+
         return false;
     }
 }

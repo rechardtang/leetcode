@@ -56,17 +56,4 @@ public class A0198_rob {
         }
         return res[nums.length - 1];
     }
-
-    public static void main(String[] args) {
-        A0198_rob r = new A0198_rob();
-        System.out.println(r.robR(new int[]{1, 2}));
-        System.out.println(r.robR(new int[]{2, 1, 1, 2}));
-        System.out.println(r.robR(new int[]{1, 2, 3, 1}));
-        System.out.println(r.robR(new int[]{2, 7, 9, 3, 1}));
-        System.out.println("==================================D");
-        System.out.println(r.robD(new int[]{1, 2}));
-        System.out.println(r.robD(new int[]{2, 1, 1, 2}));
-        System.out.println(r.robD(new int[]{1, 2, 3, 1}));
-        System.out.println(r.robD(new int[]{2, 7, 9, 3, 1}));
-    }
 }
