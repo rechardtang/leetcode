@@ -21,6 +21,14 @@ public class A0039_combinationSumTest {
     }
 
     @Test
+    public void combinationSumDfsSolution() {
+        A0039_combinationSum.Problem solution = new A0039_combinationSum.DfsSolution();
+        List<List<Integer>> lists = solution.combinationSum(new int[]{1, 2, 3}, 3);
+//        List<List<Integer>> lists = solution.combinationSum(new int[]{2, 3, 6, 7}, 7);
+//        System.out.println(lists);
+    }
+
+    @Test
     public void combinationSum() {
         List<List<Integer>> expected = new ArrayList<>();
         expected.add(Collections.singletonList(7));

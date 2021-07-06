@@ -2,6 +2,7 @@ package com.cn.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 39. 组合总和
@@ -40,6 +41,48 @@ import java.util.List;
  * 1 <= target <= 500
  */
 public class A0039_combinationSum {
+
+    interface Problem {
+        List<List<Integer>> combinationSum(int[] candidates, int target);
+    }
+
+    static class DfsSolution implements Problem {
+
+        @Override
+        public List<List<Integer>> combinationSum(int[] candidates, int target) {
+            int n = candidates.length;
+            List<List<Integer>> result = new ArrayList<>();
+            Stack<Integer> stack = new Stack<>();
+            for (int i = n; i > 0; i--) {
+                stack.push(i - 1);
+            }
+            int sum = 0;
+            List<Integer> path = new ArrayList<>();
+            while (!stack.isEmpty()) {
+                Integer popped = stack.pop();
+                int value = candidates[popped];
+//                System.out.println(value);
+                path.add(value);
+                sum += value;
+                if (sum > target) {
+                    System.out.println(path);
+                    path.remove(path.size() - 1);
+                    sum -= value;
+                    continue;
+                }
+                if (sum == target) {
+                    System.out.println(path);
+                    result.add(new ArrayList<>(path));
+                    path.remove(path.size() - 1);
+                    sum -= value;
+                }
+                for (int i = n; i > popped; i--) {
+                    stack.push(i - 1);
+                }
+            }
+            return result;
+        }
+    }
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> ans = new ArrayList<>();

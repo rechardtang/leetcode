@@ -1,7 +1,9 @@
 package com.cn.leetcode;
 
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 46. 全排列
@@ -30,6 +32,33 @@ import java.util.List;
  * nums 中的所有整数 互不相同
  */
 public class A0046_permute {
+
+    interface Problem {
+        List<List<Integer>> permute(int[] nums);
+    }
+
+    static class CustomStackDfsSolution implements Problem {
+
+        @Override
+        public List<List<Integer>> permute(int[] nums) {
+            List<List<Integer>> result = new ArrayList<>();
+            List<Integer> path = new ArrayList<>();
+            Stack<Integer> stack = new Stack<>();
+            stack.push(null);
+            boolean[] visited = new boolean[nums.length];
+            while (!stack.isEmpty()) {
+                Integer popped = stack.pop();
+                visited[popped] = true;
+                path.add(nums[popped]);
+                for (int i = 0; i < nums.length; i++) {
+                    if (!visited[i]) {
+                        stack.push(i);
+                    }
+                }
+            }
+            return result;
+        }
+    }
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

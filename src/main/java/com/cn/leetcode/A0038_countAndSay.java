@@ -54,7 +54,38 @@ import java.util.List;
 public class A0038_countAndSay {
 
     public String countAndSay(int n) {
-        return "";
+        if (n <= 0) return "";
+        if (n == 1) return "1";
+        // get prev result
+        String s = countAndSay(n - 1);
+        // process
+        int[] nums = new int[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            nums[i] = Integer.parseInt(String.valueOf(s.charAt(i)));
+        }
+        //  1  2  1  1
+        //  1  1  1  2
+        int[][] res = new int[nums.length][2];
+        int k = 0, prev = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == prev) {
+                // increment count
+                res[k - 1][0]++;
+            } else {
+                // increment count
+                res[k][0]++;
+                // set number
+                res[k][1] = nums[i];
+                // set index
+                k++;
+            }
+            prev = nums[i];
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < k; i++) {
+            sb.append(res[i][0]).append(res[i][1]);
+        }
+        return sb.toString();
     }
 
 }
