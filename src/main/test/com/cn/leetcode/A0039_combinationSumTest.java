@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class A0039_combinationSumTest {
 
     @Test
     public void combinationSumDfsSolution() {
-        A0039_combinationSum.Problem solution = new A0039_combinationSum.DfsSolution();
+        A0039_combinationSum.Solution solution = new A0039_combinationSum.DfsSolution();
         List<List<Integer>> lists = solution.combinationSum(new int[]{1, 2, 3}, 3);
 //        List<List<Integer>> lists = solution.combinationSum(new int[]{2, 3, 6, 7}, 7);
 //        System.out.println(lists);

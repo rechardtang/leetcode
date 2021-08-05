@@ -8,7 +8,7 @@ public class A0045_jumpTest {
 
     @Test
     public void jumpGreedySolution() {
-        A0045_jump.Problem solution = new A0045_jump.GreedySolution();
+        A0045_jump.Solution solution = new A0045_jump.GreedySolution();
         assertEquals(0, solution.jump(new int[]{0}));
         assertEquals(0, solution.jump(new int[]{1}));
         assertEquals(1, solution.jump(new int[]{1, 2}));
@@ -23,7 +23,7 @@ public class A0045_jumpTest {
 
     @Test
     public void jumpGreedyBackSolution() {
-        A0045_jump.Problem solution = new A0045_jump.GreedyBackSolution();
+        A0045_jump.Solution solution = new A0045_jump.GreedyBackSolution();
         assertEquals(0, solution.jump(new int[]{0}));
         assertEquals(0, solution.jump(new int[]{1}));
         assertEquals(1, solution.jump(new int[]{1, 2}));
@@ -38,7 +38,7 @@ public class A0045_jumpTest {
 
     @Test
     public void jumpDfsSolution() {
-        A0045_jump.Problem solution = new A0045_jump.DfsSolution();
+        A0045_jump.Solution solution = new A0045_jump.DfsSolution();
         assertEquals(0, solution.jump(new int[]{0}));
         assertEquals(0, solution.jump(new int[]{1}));
         assertEquals(1, solution.jump(new int[]{1, 2}));

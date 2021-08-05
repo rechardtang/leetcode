@@ -20,7 +20,7 @@ public class A0046_permuteTest {
 
     @Test
     public void permuteCustomStackDfsSolution() {
-        A0046_permute.Problem solution = new A0046_permute.CustomStackDfsSolution();
+        A0046_permute.Solution solution = new A0046_permute.CustomStackDfsSolution();
         List<List<Integer>> expected = new ArrayList<>();
         List<Integer> path1 = Arrays.asList(1, 2, 3);
         List<Integer> path2 = Arrays.asList(1, 3, 2);

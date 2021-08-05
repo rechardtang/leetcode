@@ -1,7 +1,5 @@
 package com.cn.leetcode;
 
-import java.util.List;
-
 /**
  * 45. 跳跃游戏 II
  * 给定一个非负整数数组，你最初位于数组的第一个位置。
@@ -33,11 +31,11 @@ import java.util.List;
  */
 public class A0045_jump {
 
-    interface Problem {
+    interface Solution {
         int jump(int[] nums);
     }
 
-    static class GreedySolution implements Problem {
+    static class GreedySolution implements Solution {
 
         @Override
         public int jump(int[] nums) {
@@ -54,7 +52,7 @@ public class A0045_jump {
         }
     }
 
-    static class GreedyBackSolution implements Problem {
+    static class GreedyBackSolution implements Solution {
 
         @Override
         public int jump(int[] nums) {
@@ -74,7 +72,7 @@ public class A0045_jump {
         }
     }
 
-    static class DfsSolution implements Problem {
+    static class DfsSolution implements Solution {
 
         @Override
         public int jump(int[] nums) {

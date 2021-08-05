@@ -31,12 +31,12 @@ import java.util.HashSet;
  */
 public class A0128_longestConsecutive {
 
-    interface Problem {
+    interface Solution {
 
         int longestConsecutive(int[] nums);
     }
 
-    static class BruteForceSolution implements Problem {
+    static class BruteForceSolution implements Solution {
 
         public int longestConsecutive(int[] nums) {
             if (nums.length == 0) return 0;
@@ -60,7 +60,7 @@ public class A0128_longestConsecutive {
         }
     }
 
-    static class HashSetSolution implements Problem {
+    static class HashSetSolution implements Solution {
 
         @Override
         public int longestConsecutive(int[] nums) {
@@ -83,7 +83,7 @@ public class A0128_longestConsecutive {
         }
     }
 
-    static class SortingSolution implements Problem {
+    static class SortingSolution implements Solution {
 
         @Override
         public int longestConsecutive(int[] nums) {

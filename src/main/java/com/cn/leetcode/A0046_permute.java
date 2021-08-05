@@ -1,6 +1,5 @@
 package com.cn.leetcode;
 
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -33,11 +32,11 @@ import java.util.Stack;
  */
 public class A0046_permute {
 
-    interface Problem {
+    interface Solution {
         List<List<Integer>> permute(int[] nums);
     }
 
-    static class CustomStackDfsSolution implements Problem {
+    static class CustomStackDfsSolution implements Solution {
 
         @Override
         public List<List<Integer>> permute(int[] nums) {

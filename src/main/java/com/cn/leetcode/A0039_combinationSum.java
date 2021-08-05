@@ -42,11 +42,11 @@ import java.util.Stack;
  */
 public class A0039_combinationSum {
 
-    interface Problem {
+    interface Solution {
         List<List<Integer>> combinationSum(int[] candidates, int target);
     }
 
-    static class DfsSolution implements Problem {
+    static class DfsSolution implements Solution {
 
         @Override
         public List<List<Integer>> combinationSum(int[] candidates, int target) {
